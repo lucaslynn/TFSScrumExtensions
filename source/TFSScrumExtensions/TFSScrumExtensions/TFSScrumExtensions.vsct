@@ -66,7 +66,7 @@
         <Icon guid="guidPlanWorkItemImage" id="IdPlanWorkItemImage" />
         <Strings>
           <CommandName>cmdPlanWorkItem</CommandName>
-          <ButtonText>Plan Work Item</ButtonText>
+          <ButtonText>计划工作项</ButtonText>
         </Strings>
       </Button>
 

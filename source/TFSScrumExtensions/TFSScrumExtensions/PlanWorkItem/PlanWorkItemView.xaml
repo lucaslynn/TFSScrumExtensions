@@ -41,11 +41,11 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="0" Grid.Row="0">
-                <Hyperlink x:Name="HyperlinkEditConfiguration" Click="HyperlinkEditConfiguration_Click">Edit Config</Hyperlink>
+                <Hyperlink x:Name="HyperlinkEditConfiguration" Click="HyperlinkEditConfiguration_Click">编辑设置</Hyperlink>
             </TextBlock>
             <TextBlock Grid.Column="1" Margin="3,0" Text="|" />
             <TextBlock Grid.Column="2" Grid.Row="0">
-                <Hyperlink x:Name="HyperlinkReloadConfiguration" Click="HyperlinkReloadConfiguration_Click">Reload Config</Hyperlink>
+                <Hyperlink x:Name="HyperlinkReloadConfiguration" Click="HyperlinkReloadConfiguration_Click">重载设置</Hyperlink>
             </TextBlock>
         </Grid>
 
@@ -55,8 +55,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0">
-                <Run Text="Planning Template" />
-                <Run Text=":" />
+                <Run Text="计划模板" />
+                <Run Text="：" />
             </TextBlock>
 
             <ComboBox Grid.Column="1" Margin="15, 0, 0, 0" HorizontalAlignment="Stretch"
@@ -81,20 +81,20 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" Text="Work Item Id(s):" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,15,0" />
+                <TextBlock Grid.Column="0" Text="工作项编号：" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,15,0" />
                 <TextBox Grid.Column="1" Text="{Binding WorkItemIds, Mode=TwoWay, Converter={StaticResource ArrayToString}}" VerticalContentAlignment="Center" Margin="0,0,5,0" IsEnabled="{Binding AreWorkItemsSelected, Converter={StaticResource NegativeBoolConverter}}" />
-                <Button Grid.Column="2" x:Name="buttonSelectWorkItems" Content="Select WorkItem(s)" IsEnabled="{Binding AreWorkItemsSelected, Converter={StaticResource NegativeBoolConverter}}" Click="buttonSelectWorkItems_Click" />
+                <Button Grid.Column="2" x:Name="buttonSelectWorkItems" Content="选择工作项" IsEnabled="{Binding AreWorkItemsSelected, Converter={StaticResource NegativeBoolConverter}}" Click="buttonSelectWorkItems_Click" />
             </Grid>
 
-            <GroupBox Header="Work Item(s) Information:" Grid.Row="1" Margin="0,15,0,0" HorizontalAlignment="Stretch">
+            <GroupBox Header="工作项信息：" Grid.Row="1" Margin="0,15,0,0" HorizontalAlignment="Stretch">
                 <Grid HorizontalAlignment="Stretch" >
                     <StackPanel Orientation="Vertical">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Title:" Margin="0,0,5,0" VerticalAlignment="Center" FontStyle="Italic" />
+                            <TextBlock Text="标　　题：" Margin="0,0,5,0" VerticalAlignment="Center" FontStyle="Italic" />
                             <TextBlock Text="{Binding AggregatedWorkItemTitle}" VerticalAlignment="Center" IsEnabled="False" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Iteration Path:" Margin="0,5,5,0" VerticalAlignment="Center" FontStyle="Italic"/>
+                            <TextBlock Text="迭代路径：" Margin="0,5,5,0" VerticalAlignment="Center" FontStyle="Italic"/>
                             <TextBlock Text="{Binding AggregatedWorkItemIterationPath}" VerticalAlignment="Center" IsEnabled="False" />
                         </StackPanel>
                     </StackPanel>
@@ -148,7 +148,7 @@
                                 FontSize="14"
                             />
 
-                            <Expander Grid.Row="1" Header="Users and Time" IsExpanded="True">
+                            <Expander Grid.Row="1" Header="人员和工时" IsExpanded="True">
                                 <StackPanel Orientation="Vertical">
                                     <ListView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding InstancesCollection}" BorderThickness="0" Margin="15,0,0,0">
                                         <ListBox.ItemContainerStyle>
@@ -180,7 +180,7 @@
 
                                                         <TextBox x:Name="txtBoxItemInstanceEstimatedTime" Text="{Binding EstimatedTime}" MinWidth="20" />
 
-                                                        <TextBlock Margin="5,0,0,0" Text="hours" />
+                                                        <TextBlock Margin="5,0,0,0" Text="工时" />
                                                     </StackPanel>
                                                 </Grid>
                                             </DataTemplate>
@@ -189,7 +189,7 @@
                                 </StackPanel>
                             </Expander>
 
-                            <Expander Grid.Row="2" Grid.Column="0" IsExpanded="False" Header="Work Item Properties" >
+                            <Expander Grid.Row="2" Grid.Column="0" IsExpanded="False" Header="工作项属性" >
 
                                 <Grid Margin="10,4,0,0">
                                     <Grid.RowDefinitions>
@@ -201,8 +201,8 @@
                                         <!-- Work Item Type Field -->
                                         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
                                             <TextBlock x:Name="comboWorkItemTypeLabel">
-                                                <Run Text="Work Item Type" />
-                                                <Run Text=":" />
+                                                <Run Text="工作项类型" />
+                                                <Run Text="：" />
                                             </TextBlock>
 
                                             <ComboBox HorizontalAlignment="Stretch"
@@ -216,8 +216,8 @@
                                         <!-- Work Item Link Type Field -->
                                         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
                                             <TextBlock x:Name="comboWorkItemLinkTypeLabel">
-                                                <Run Text="Work Item Link Type" />
-                                                <Run Text=":" />
+                                                <Run Text="链接类型" />
+                                                <Run Text="：" />
                                             </TextBlock>
 
                                             <ComboBox HorizontalAlignment="Stretch"
@@ -231,8 +231,8 @@
                                         <!-- Prefix Field -->
                                         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
                                             <TextBlock x:Name="txtBlockItemPrefixLabel">
-                                        <Run Text="Prefix" />
-                                        <Run Text=":" />
+                                        <Run Text="前缀" />
+                                        <Run Text="：" />
                                             </TextBlock>
 
                                             <TextBox x:Name="txtBoxItemPrefix" Text="{Binding Prefix}" MinWidth="50" HorizontalAlignment="Stretch" />
@@ -241,8 +241,8 @@
                                         <!-- Sufix Field-->
                                         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
                                             <TextBlock x:Name="txtBlockItemSufixLabel">
-                                        <Run Text="Sufix" />
-                                        <Run Text=":" />
+                                        <Run Text="后缀" />
+                                        <Run Text="：" />
                                             </TextBlock>
 
                                             <TextBox x:Name="txtBoxItemSufix" Text="{Binding Sufix}" MinWidth="50" HorizontalAlignment="Stretch" />
@@ -261,23 +261,23 @@
                                             </Grid.ColumnDefinitions>
                                             
                                             <TextBlock>
-                                                <Run Text="Others" />
-                                                <Run Text=":" />
+                                                <Run Text="其他" />
+                                                <Run Text="：" />
                                             </TextBlock>
                                             
-                                            <CheckBox Grid.Row="1" Grid.Column="0" Margin="0,2,0,0" Content="Copy Description" IsChecked="{Binding IsCopyDescriptionEnabled, Mode=TwoWay}" Background="Transparent" />
+                                            <CheckBox Grid.Row="1" Grid.Column="0" Margin="0,2,0,0" Content="复制工作项目描述" IsChecked="{Binding IsCopyDescriptionEnabled, Mode=TwoWay}" Background="Transparent" />
                                         </Grid>
                                     </StackPanel>
 
                                     <StackPanel Margin="0,10,0,0" Grid.Row="1">
                                         <TextBlock>
-                                            <Run Text="Custom" />
-                                            <Run Text=":" />
+                                            <Run Text="自定义字段" />
+                                            <Run Text="：" />
                                         </TextBlock>
                                         <DataGrid x:Name="dataGridCustomProperties" ItemsSource="{Binding CustomProperties}" CanUserAddRows="True" AutoGenerateColumns="False">
                                             <DataGrid.Columns>
-                                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="False" />
-                                                <DataGridTextColumn Header="Value" Binding="{Binding Value}" IsReadOnly="False" />
+                                                <DataGridTextColumn Width="80" Header="字段名" Binding="{Binding Name}" IsReadOnly="False" />
+                                                <DataGridTextColumn Width="200" Header="字段值" Binding="{Binding Value}" IsReadOnly="False" />
                                             </DataGrid.Columns>
                                         </DataGrid>
                                     </StackPanel>
@@ -302,7 +302,7 @@
             
             <Button x:Name="buttonCreateWorkItems" Grid.Row="0" Grid.Column="1" Click="buttonCreateWorkItems_Click">
                 <Button.Content>
-                    <TextBlock Text="Create Work Item(s)"></TextBlock>
+                    <TextBlock Text="创建工作项"></TextBlock>
                 </Button.Content>
             </Button>
         </Grid>
@@ -315,7 +315,7 @@
             
             <TextBlock Grid.Row="0" FontWeight="Bold">
                 <Run Text="Last Created Work Items" />
-                <Run Text=":" />
+                <Run Text="：" />
             </TextBlock>
 
             <ListView Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding CreatedWorkItems}">
