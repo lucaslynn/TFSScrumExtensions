@@ -79,7 +79,7 @@ namespace JosePedroSilva.TFSScrumExtensions.TeamFoundationClient
             TfsTeamProjectCollection projectCollection = this.GetTeamProjectCollection();
             ICommonStructureService css = (ICommonStructureService)projectCollection.GetService(typeof(ICommonStructureService));
             IGroupSecurityService gss = projectCollection.GetService<IGroupSecurityService>();
-            IIdentityManagementService ims = projectCollection.GetService<IIdentityManagementService>(); 
+            IIdentityManagementService ims = projectCollection.GetService<IIdentityManagementService>();
 
             // get the tfs project
             var projectList = css.ListAllProjects();
@@ -244,11 +244,19 @@ namespace JosePedroSilva.TFSScrumExtensions.TeamFoundationClient
                         // AssignedTo
                         newWorkItem.UpdateField(workItemFieldMatches[WorkItemField.AssignedTo], taskTemplateInstance.AssignedTo);
 
-                        // Original Estimate
-                        newWorkItem.UpdateField(workItemFieldMatches[WorkItemField.OriginalEstimate], taskTemplateInstance.EstimatedTime);
-
-                        // Remaining Work
-                        newWorkItem.UpdateField(workItemFieldMatches[WorkItemField.RemainingWork], taskTemplateInstance.EstimatedTime);
+                        switch (taskTemplate.WorkItemType)
+                        {
+                            case "产品积压工作项":
+                                // Effort
+                                newWorkItem.UpdateField(workItemFieldMatches[WorkItemField.Effort], taskTemplateInstance.EstimatedTime);
+                                break;
+                            case "任务":
+                                // RemainingWork
+                                newWorkItem.UpdateField(workItemFieldMatches[WorkItemField.RemainingWork], taskTemplateInstance.EstimatedTime);
+                                break;
+                            default:
+                                break;
+                        }
 
                         // Custom Properties
                         if (taskTemplate.CustomProperties != null && taskTemplate.CustomProperties.Count > 0)
@@ -302,12 +310,12 @@ namespace JosePedroSilva.TFSScrumExtensions.TeamFoundationClient
             WorkItemStore store = projectCollection.GetService<WorkItemStore>();
 
             WorkItem[] workItems = new WorkItem[workItemIds.Length];
-            
-            for(int i = 0; i < workItemIds.Length; i++)
+
+            for (int i = 0; i < workItemIds.Length; i++)
             {
                 WorkItem workItem = store.GetWorkItem(workItemIds[i]);
 
-                if(workItem == null)
+                if (workItem == null)
                 {
                     throw new ArgumentNullException("WorkItem");
                 }

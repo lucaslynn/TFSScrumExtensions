@@ -2,7 +2,7 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="59e02031-1f61-4fba-9c44-b40543411b8d" Version="0.1.0" Language="zh-Hans" Publisher="JosePedroSilva" />
-    <DisplayName>TFS Scrum 扩展</DisplayName>
+    <DisplayName>TFS Scrum 扩展（首游专版）</DisplayName>
     <Description xml:space="preserve">TFS Scrum 扩展是一个设计用于帮助项目管理者和开发者更易于计划和评估多项任务的 Visual Studio 扩展。</Description>
     <MoreInfo>https://github.com/jpsfs/TFSScrumExtensions</MoreInfo>
     <Icon>Resources\PlanWorkItem.png</Icon>

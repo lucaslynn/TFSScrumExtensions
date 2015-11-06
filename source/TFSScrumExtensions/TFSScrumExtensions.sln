@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFSScrumExtensions", "TFSScrumExtensions\TFSScrumExtensions.csproj", "{58559E46-B771-4732-AC43-58E57A34DCEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFSScrumExtensions_IntegrationTests", "TFSScrumExtensions\TFSScrumExtensions_IntegrationTests\TFSScrumExtensions_IntegrationTests.csproj", "{C19DD5D8-97A7-4767-934B-9ECCDD306EE5}"
@@ -23,6 +25,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{58559E46-B771-4732-AC43-58E57A34DCEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58559E46-B771-4732-AC43-58E57A34DCEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58559E46-B771-4732-AC43-58E57A34DCEF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{58559E46-B771-4732-AC43-58E57A34DCEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58559E46-B771-4732-AC43-58E57A34DCEF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C19DD5D8-97A7-4767-934B-9ECCDD306EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

@@ -26,18 +26,13 @@ namespace JosePedroSilva.TFSScrumExtensions.DefaultConfiguration
                     Value = "Assigned To"
                 },
                 new WorkItemFieldMatch(){
-                    Field = WorkItemField.OriginalEstimate,
-                    Value = "Original Estimate"
+                    Field = WorkItemField.Effort,
+                    Value = "Effort"
                 },
                 new WorkItemFieldMatch(){
                     Field = WorkItemField.RemainingWork,
                     Value = "Remaining Work"
                 },
-                new WorkItemFieldMatch()
-                {
-                    Field = WorkItemField.CompletedWork,
-                    Value = "Completed Work"
-                }
             },
             Templates = new List<Template>()
             {

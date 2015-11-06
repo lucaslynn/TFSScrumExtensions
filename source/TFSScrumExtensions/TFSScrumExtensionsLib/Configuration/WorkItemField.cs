@@ -13,8 +13,7 @@ namespace JosePedroSilva.TFSScrumExtensions.Configuration
     public enum WorkItemField
     {
         AssignedTo,
-        OriginalEstimate,
         RemainingWork,
-        CompletedWork
+        Effort
     }
 }

@@ -223,7 +223,7 @@
                                             <ComboBox HorizontalAlignment="Stretch"
                                                   IsEditable="True"
                                                   ItemsSource="{Binding DataContext.AvailableWorkItemLinkTypes, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"
-                                                  DisplayMemberPath="ReferenceName"
+                                                  DisplayMemberPath="ReportingName"
                                                   SelectedValuePath="ReferenceName"
                                                   SelectedValue="{Binding WorkItemLinkType, Mode=TwoWay}" />
                                         </StackPanel>
@@ -265,7 +265,7 @@
                                                 <Run Text="：" />
                                             </TextBlock>
                                             
-                                            <CheckBox Grid.Row="1" Grid.Column="0" Margin="0,2,0,0" Content="复制工作项目描述" IsChecked="{Binding IsCopyDescriptionEnabled, Mode=TwoWay}" Background="Transparent" />
+                                            <CheckBox Grid.Row="1" Grid.Column="0" Margin="0,2,0,0" Content="复制工作项目说明" IsChecked="{Binding IsCopyDescriptionEnabled, Mode=TwoWay}" Background="Transparent" />
                                         </Grid>
                                     </StackPanel>
 
@@ -314,7 +314,7 @@
             </Grid.RowDefinitions>
             
             <TextBlock Grid.Row="0" FontWeight="Bold">
-                <Run Text="Last Created Work Items" />
+                <Run Text="最近创建的工作项" />
                 <Run Text="：" />
             </TextBlock>
 
