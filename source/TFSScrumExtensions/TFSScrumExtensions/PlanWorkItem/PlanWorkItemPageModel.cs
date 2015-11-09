@@ -36,8 +36,8 @@ namespace JosePedroSilva.TFSScrumExtensions.PlanWorkItem
         private ObservableCollection<PlanningTemplate> _planningTemplates;
 
         private Boolean _areWorkItemsSelected;
-        private String _aggregatedWorkItemTitle = "(no information available at this moment)";
-        private String _aggregatedWorkItemIterationPath = "(no information available at this moment)";
+        private String _aggregatedWorkItemTitle = "（当前无可用信息）";
+        private String _aggregatedWorkItemIterationPath = "（当前无可用信息）";
 
         #endregion
 

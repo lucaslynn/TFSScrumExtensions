@@ -208,7 +208,7 @@ namespace JosePedroSilva.TFSScrumExtensions.PlanWorkItem
                 {
                     if (String.IsNullOrWhiteSpace(taskTemplateInstance.AssignedTo))
                     {
-                        var dlgResult = MessageBox.Show("There are instances without an assigned User. Do you want to continue?", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.Yes);
+                        var dlgResult = MessageBox.Show("检查到一个工作项未指派人员，是否继续创建？", "警告", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.Yes);
 
                         if (dlgResult != MessageBoxResult.Yes)
                         {

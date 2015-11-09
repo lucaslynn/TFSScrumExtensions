@@ -276,8 +276,8 @@
                                         </TextBlock>
                                         <DataGrid x:Name="dataGridCustomProperties" ItemsSource="{Binding CustomProperties}" CanUserAddRows="True" AutoGenerateColumns="False">
                                             <DataGrid.Columns>
-                                                <DataGridTextColumn Width="80" Header="字段名" Binding="{Binding Name}" IsReadOnly="False" />
-                                                <DataGridTextColumn Width="200" Header="字段值" Binding="{Binding Value}" IsReadOnly="False" />
+                                                <DataGridTextColumn Width="Auto" Header="字段名" Binding="{Binding Name}" IsReadOnly="False" />
+                                                <DataGridTextColumn Width="Auto" Header="字段值" Binding="{Binding Value}" IsReadOnly="False"  />
                                             </DataGrid.Columns>
                                         </DataGrid>
                                     </StackPanel>
